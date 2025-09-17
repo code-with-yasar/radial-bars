@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0f0f1a;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.container{
+    width: 650px;
+    height: 300px;
+    padding: 5px;
+    margin-left: 20%;
+}
+.heading{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    color: lavender;
+    margin: 50px;
+}
+
+
+.radial-bars{
+    width: 80%;
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+.radial-bars .radial-bar{
+    width: 40%;
+    height: 155px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 18px;
+    color: royalblue;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotate(-90deg);
+    width: 100px;
+    height: 100px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: royalblue;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset:105;
+    }
+}
+
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 135;
+    }
+}
+
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 105;
+    }
+}
+
+
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+}
+.progress-bar .text{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(50px);
+    font-size: 15px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+} 
